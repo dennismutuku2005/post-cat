@@ -1,0 +1,95 @@
+{
+  "name": "post-cat",
+  "displayName": "Post-Cat",
+  "description": "🐱 Lightweight API client for VS Code - Make HTTP requests directly from your editor",
+  "version": "0.1.0",
+  "publisher": "Dennis Muuo Mutuku",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Debuggers"
+  ],
+  "keywords": [
+    "api",
+    "rest",
+    "http",
+    "client",
+    "requests",
+    "postman",
+    "thunder client"
+  ],
+  "icon": "images/logo.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "post-cat.openPanel",
+        "title": "Open Post-Cat",
+        "category": "Post-Cat"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "post-cat.openPanel",
+          "when": "false"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "post-cat.openPanel",
+          "group": "navigation",
+          "when": "false"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "webpack --mode production && tsc -p ./",
+    "watch": "webpack --mode development --watch & tsc -p ./ -watch",
+    "webpack": "webpack --mode development",
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "json5": "^2.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-json-pretty": "^2.2.0",
+    "uuid": "^9.0.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@types/json5": "^0.0.29",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/uuid": "^9.0.0",
+    "@types/vscode": "^1.102.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^9.25.1",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.0.0",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

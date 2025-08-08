@@ -1,0 +1,102 @@
+/* Same CSS as in the TypeScript version */
+.app-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.panel {
+  background-color: var(--panel-bg);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+}
+
+/* Add all other CSS styles from the TypeScript version */
+
+
+/* Response Panel Styles */
+.response-panel {
+  background-color: var(--panel-bg);
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.response-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.status-2xx {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-4xx {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-5xx {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.time-badge {
+  padding: 4px 8px;
+  background-color: #e2e3e5;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.headers-section,
+.body-section {
+  margin-bottom: 16px;
+}
+
+.headers-section h3,
+.body-section h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.no-data {
+  color: #6c757d;
+  font-style: italic;
+  padding: 8px;
+  background-color: var(--panel-bg);
+  border-radius: 4px;
+}
+
+/* Custom scrollbar for JSON output */
+.react-json-pretty {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.react-json-pretty::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.react-json-pretty::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
